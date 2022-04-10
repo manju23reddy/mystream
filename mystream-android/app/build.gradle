@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.domain.mystream"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+        aaptOptions { cruncherEnabled = false }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions { javaMaxHeapSize "4g" }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:appcompat-v7:28.0.0'.
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.parse:parse-android:1.16.0'
+    implementation 'com.parse.bolts:bolts-android:1.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.37.0'
+    implementation 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.firebase:firebase-core:20.0.2'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.onesignal:OneSignal:4.4.1'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+}
+apply plugin: 'com.google.gms.google-services'

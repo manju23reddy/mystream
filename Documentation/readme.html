@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MyStream | Android - Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan flat skin for Bootstrap">
+    <meta name="author" content="cubycode">
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/80.png"/>
+    <!-- Bootstrap 3 Plan styles -->
+    <link id="plan-theme" href="assets/css/bootstrap.plan.amethyst.min.css" rel="stylesheet">
+    <!-- Bootstrap Select -->
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <!-- Plan UI -->
+    <link id="plan-theme-extra" href="assets/css/plan.amethyst.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- Docs Custom styles -->
+<style>
+body {
+  padding: 10px 0 0 0;
+}
+footer {
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 30px;
+  margin-top: 50px;
+}
+a {
+  font-weight: 700;
+}
+hr {
+  margin-top: 100%;
+  margin-bottom: 20px;
+  display: block;
+  height: 1px;
+  border-top: 2px solid #555;
+}
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 15px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+	}
+	.row {
+    margin-left: 69px;
+    margin-right: -15px;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+
+    <div class="text-center">
+      <h4>MyStream | Android</h4>
+      <h4 style="color: #777;">Documentation</h4>
+      <img src="assets/img/80.png" width="60">
+      <br><br>
+    </div>
+    <ul class="nav nav-stacked nav-spaced">
+
+      <li><a href="#tutorials">Useuful tutorials <i class="fa fa-exclamation-circle pull-right"></i></a></li>
+      <li><a href="#customization">Customization <i class="fa fa-cog pull-right"></i></a></li>
+      <li><a href="#configuration">Configuration <i class="fa fa-edit pull-right"></i></a></li>
+      <li><a href="#parse">Parse database setup <i class="fa fa-database pull-right"></i></a></li>
+      <li><a href="#facebook">Facebook Login setup <i class="fa fa-facebook pull-right"></i></a></li>
+      <li><a href="#push">Push Notifications setup <i class="fa fa-bell pull-right"></i></a></li>
+	  <li><a href="#onesignal">One Signal setup <i class="fa fa-bell pull-right"></i></a></li>
+      <li><a href="#admob">AdMob ads setup <i class="fa fa-google pull-right"></i></a></li>
+      <li><a href="#faq">F.A.Q. <i class="fa fa-question-circle pull-right"></i></a></li>
+      <li><a href="#webversion">Website configuration <i class="fa fa-link pull-right"></i></a></li>
+      <li><a href="#greetings">App Rating <i class="fa fa-star pull-right"></i></a></li>
+
+    </ul>
+  </div>
+</div>
+
+<div class="main">
+
+ <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+            <!-- USEFUL TUTORIALS -->
+            <section id="tutorials">
+                <h2 class="title">Useful tutorials</h2>
+                            
+                                • If you need to learn the process of publishing apps on the Google Play Store, read this tutorial: <strong> <a href="https://hubpages.com/technology/How-to-publish-an-Android-app-to-the-Play-Store" target="_blank">How to publish an app to the Play Store</a></strong>
+                                <br><br>
+
+                                • If you  need to learn how to rename a package name, read this: <strong> <a href="https://hubpages.com/technology/Android-How-to-rename-an-app-package" target="_blank">How to rename an app package name</a></strong>
+                                <br><br>
+
+                                • Want to get more info about Parse SDK and its Dashboard on back4app? Check this out: <strong> <a href="https://hubpages.com/technology/Parse-SDK-will-not-shutdown-in-thanks-to-back4app" target="_blank">About Parse SDK and back4app</a></strong>
+                                <br><br>
+
+
+                                • Want to host Parse Server on Heorku? Check this out: <strong> <a href="hhttps://hubpages.com/technology/How-to-host-Parse-Server-and-its-Dashboard-on-Heroku" target="_blank">Host Parse Server and Dashboard on Heroku</a></strong>
+                                <br><br>
+
+            </section>
+
+
+
+
+
+            <!-- CUSTOMIZATION -->
+            <section id="customization">
+                <hr>
+                <h2 class="title">Customization</h2>
+
+                    • <strong>User Interface:</strong> If you want to edit the User Interface of this app, you can do so by editing the <code>xml</code> files included in the <code>res/layout</code> folder in the Android Studio’s <code>Design</code> tab. 
+                                
+                    <div class="alert alert-danger">
+                        Please always use the latest version of Android Studio.
+                    </div>
+
+
+                    • <strong>Images:</strong> You can easily change App icons, logo, buttons and other images by accessing <code>drawable</code> folder, its path is <code>app/src/main/res/drawable</code>.<br> 
+                    For the App icons, you have to replace the png images included into all the <code>mipmaps</code> folders.
+                    <br><br>
+
+                    • <strong>Terms Of Service HTML file:</strong> You can find an HTML file called <code>tou.html</code> into the <code>assets</code> folder of this Android Studio project, that’s a file you can edit as you wish, since there is <code>APP_NAME</code> here and there, replace it with your app’s name and read it carefully before publishing the app on the Play Store.
+                    <br><br>
+
+                    <strong>IMPORTANT:</strong> You should also check the <code>Privacy Policy</code> statements on the bottom of that file and edit the contact email addres into your own email adress:
+<pre>
+  href= <font color="red"> "mailto:support@yourdomain.com"</font>><font color="red"> support@yourdomain.com</font>
+</pre>
+                    That's important for EU GDPR laws since 25 May 2018.
+                    <div class="well"> 
+                      In case some user will ask you to delete his/her account, you must enter your Parse Dashboard, search for its <code>objectId</code> or <code>username</code> in all Classes, and delete the rows that contain such objectId in their cells (Pointers included).
+                    </div>
+                    <br>
+                    
+            </section>
+
+
+
+
+            <!--  CONFIGURATION -->
+            <section id="configuration">
+                <hr>
+                <h2 class="title">Configuration</h2>
+
+                    Head over <code>Configs.java</code> file and check out the <strong><font color="green">comments</font></strong> in such file which will help you editing this template.
+                    <br><br><br>
+
+
+                    • <strong>Add Stickers:</strong> This app contains 13 default png images as stickers, in order for you to add stickers to this app you need to add new png images in the <code>drawable</code> folder and name them progressively.
+                    <br><br>
+                    Example: if you want to add a 14th sticker, do the following steps:<br>
+                    1. Create your png image, 256x256px or 512x512px (check the existing ones as a size reference)<br>
+                    2. Save it into the <code>drawable</code> folder <br> 
+                    3. Rename is as <code>s13</code> and enter <code>Configs.java</code>.<br>
+                    4. Change the number of the following variable into <code>14</code>:
+<pre>
+    public static int STICKERS_AMOUNT = <font color="blue"> 14</font>
+</pre>
+<br>
+                    You have to repeat the steps above for all new stickers you'll add in this app. If you're wondering why your new image name is <code>s13</code> and the <code>STICKERS_AMOUNT</code> value is <code>14</code>, that's because the app creates an array of stickers and Arrays are 0-indexed, so the <code>s0</code> is the <code>1st</code> sticker, the <code>s1</code> is the <code>2nd</code> sticker, and so on. You can easily understand that the <code>14th</code> sticker of the example above is at <code>13 index</code> position, and that's why your Image Set is named <code>s13</code> ;)
+                    
+            </section>
+
+
+
+
+            <!-- PARSE DATABASE SETUP -->
+            <section id="parse">
+                <hr>
+                <h2 class="title">Parse Database setup</h2>
+
+                    Before using the app, you must create your own App on your <a href="https://dashboard.back4app.com/apps" target="_blank">back4app Dashboard</a>. The link we’ve provided above points already to the back4app's Dashboard, but in case you don’t have an account on back4app.com yet, you’ll be redirected to the Sign Up page.
+                    <br><br>
+
+                    Once you’ll be signed in on back4app, enter your Dashboard and simply click on the <strong>Build new app</strong> button, give your app a name and a brief description (optional), click <code>Next</code> and you’ll be redirected to the settings page. <br>
+                    Click on <strong>SETTINGS</strong> in the <code>Core Settings</code> box, copy the <code>App ID</code> and <code>Client Key</code> strings and replace the existing ones into <code>Configs.java</code>
+                    <br><br>
+
+                    <div class="col-lg-12 col-sm-6 ">
+                        <div class="thumbnail"><img src="assets/img/build-new-app.jpg"></div>
+                        <div class="thumbnail"><img src="assets/img/appclientkey.jpg"></div>
+                    </div>
+
+                    Strings to replace in the Configs file in the app's project:<br>
+<pre>
+    public static String PARSE_APP_ID = <font color="green">"pJf7oFpFep7wDQTqEM6RDarUhuZ8hmxQ7zofOIxQ"</font>;  
+    public static String PARSE_CLIENT_KEY = <font color="green">"1BY9Ojxt0gwMzgpGF5noXWbLc1p2fJ6Do3mrrRoD"</font>;
+</pre>
+<br><br>
+                        
+                    <div class="well">
+                        <strong>Please note that users can instantly report offensive/inappropriate content and users</strong>, so you should daily or weekly check your Parse Dashboard for reported content and take action for them, you can check the <code>isReported</code> and <code>reportedBy</code> columns of the <strong>Comments, Streams</strong> and <strong>User</strong> classes.<br>
+                        For the <strong>Streams</strong> and <strong>Comments</strong> classes, the <code>reportedBy</code> is an array of Users objectId's who reported content, which means that those users won't see those content, but other users will still see them, unless you will delete the reported rows in your Parse Dashboard.
+                        <br><br>
+                        <strong>PLEASE NOTE </strong> that if you'll remove a row in those classes, you will have to find all the references to its <code>objectId</code> in the other classes too and remove those rows where its <code>objectId</code> is contained.   
+                    </div>
+
+            </section>
+
+
+
+
+
+
+
+           <!-- FACEBOOK LOGIN SETUP -->
+            <section id="facebook">
+                <hr>
+                <h2 class="title">Facebook Login setup</h2>
+
+
+                    1. Create your own Facebook App here: <a href="https:/developers.facebook.com/apps/" target="_blank">Facebook developer console</a><br>
+                    2. Open your <a href="https://developers.facebook.com/apps" target="_blank">Facebook App Dashboard</a> and select your application.<br>
+                    3. Select <strong>Settings</strong> from the left navigation and select <strong>Basic</strong> type <strong>Privacy Policy</strong> URL and select <strong>Category</strong>.<br>
+                    <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/step_one.png"></div>
+                            </div>
+                            <br><br>
+					4. Click <strong>Add Platform</strong> at the bottom of the page and select <strong>Android</strong>.<br>
+                    5. Locate your package name in Android Studio and copy it to your clipboard.<br>
+                    6. Return to the <strong>App Dashboard</strong> and paste your <code>package name</code> into the <strong>Google Play Package Name</strong> field.<br>
+                    7. Type <code>Intro</code> in the <strong>Class Name</strong> filed.<br>
+                    8. Enable <strong>Single Sign On</strong>.<br>
+                    9. Now run your app via Android Studio, either on the Emulator or real device, do not login, just wait for the app to print a Key Hash in your Logcat. You should get something like this (just an example):
+<pre>
+    I/log-: keyhash: U05jRHlAyYvJZCAuPfKI+/l6fzQ=
+</pre>
+                    10. Copy that key hash string in your clipboard and paste it in the <strong>Key Hashes</strong> filed.<br>
+					<div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/step_two.png"></div>
+                            </div>
+                            <br><br>
+                    11. Click <strong>Save Changes</strong> at the bottom of the App Dashboard window.<br>
+
+                
+
+
+                    12. Enter your app <strong>Server Settings</strong> on back4app, scroll down to the <strong>Facebook Login</strong> section and click <strong>SETTINGS</strong><br>
+
+                    <div class="col-lg-12 col-sm-6 ">
+                        <div class="thumbnail"><img src="assets/img/server-settings.jpg"></div>
+                    </div>
+                    <br><br>
+
+                    
+                    13. Paste your <code>Facebook App ID</code> in the empty filed and click the <strong>+</strong> button, then <strong>SAVE</strong><br>
+                    
+                    <div class="col-lg-12 col-sm-6 ">
+                        <div class="thumbnail"><img src="assets/img/facebook-login-save.jpg"></div>
+                    </div>
+                    <br><br>
+                        
+
+                    14. Now open <code>strings.xml</code> in Android Studio and replace the existing ID with your own <code>Facebook App ID</code>:<br>
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#a65700; '>&lt;</span><span style='color:#5f5035; '>string</span> <span style='color:#274796; '>name</span><span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>facebook_app_id</span><span style='color:#800000; '>"</span><span style='color:#a65700; '>></span>1373896799328580<span style='color:#a65700; '>&lt;/</span><span style='color:#5f5035; '>string</span><span style='color:#a65700; '>></span>
+</pre>
+<br><br>
+            
+                    15. Lastly make your app public:
+                    
+                    <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/step_three.png"></div>
+                            </div>
+                            <br><br>
+
+
+                    16. Lastly, when your app will be ready to be uploaded to the Play Store, generate a <code>Signed APK</code> and install it in your device - <strong>keep it plugged in the USB port of your computer</strong>.<br> 
+                    Then run your Signed APK, enter the <code>Intro</code> screen of your app and check your Logcat to get a new <code>key hash</code>: you must copy it and paste it next to the previuous keyhash string you've set on step 10.
+                    <br><br>
+
+
+                    <strong>You’re done with setting up Facebook Login in this app, now you can test it.</strong>
+                    <br>
+
+            </section> 
+
+
+
+
+
+
+            <!-- PUSH NOTIFICATIONS SETUP -->
+            <section id="push">
+                <hr>
+                <h2 class="title">Push Notifications setup</h2>
+
+                    1. Add your project in your <a href="https://console.firebase.google.com/" target="_blank"><strong>Firebase console</strong></a> by giving it a name (usually the new name you gave to your app), and click <strong>CREATE PROJECT</strong>.
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push1.png"></div>
+                                <div class="thumbnail"><img src="assets/img/android-push2.png"></div>
+                            </div>
+
+                            2. After Firebase has created your Project, click <code>Add Firebase to your Android app</code>.<br>
+                            a) Paste your new app's <code>package name</code> in the first field<br>
+                            b) Type the name of your app in the second field.<br>
+                            c) Ingore ther <code>SHA-1</code> field and just click <strong>REGISTER APP</strong>
+                            <br><br>
+
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push3.png"></div>
+                            </div>
+                            <br><br>
+                            
+                            3. Download the the <code>google-services.json</code> file, after you've downloaded it, click <strong>NEXT</strong>
+                            <br><br>
+                            
+                            4. In the <strong>Add Firebase SDK</strong> section, ingore everything and click <strong>NEXT</strong>
+                            <br><br>
+
+                            5. In the last section, just click <code>Skip this step</code>. You'll be redirected to the <strong>Overview</strong> page of your new Firebase project.
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push4.png"></div>
+                            </div>
+                            <br><br>
+
+                            6. Click on the settings icon -> Project settings:
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push5.png"></div>
+                            </div>
+                            <br><br> 
+
+                            7. Click the <strong>CLOUD MESSAGING</strong> tab and check your <code>Server Key</code> and <code>Sender ID</code> strings, you'll need to paste them in the code and Android Push Notifications section on back4app.
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push6.png"></div>
+                            </div>
+                            <br><br>
+
+                            8. Enter the <code>Android Push Notifications</code> section of your app on back4app and click <strong>EDIT</strong>. Then paste your <code>Sender ID</code> and <code>Server key</code> into their relatyive fields.<br>
+                            Lastly, click <strong>NEXT</strong>.
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/android-push7.png"></div>
+                                <div class="thumbnail"><img src="assets/img/android-push8.png"></div>
+                            </div>
+                            <br><br>
+
+                            10. Open the <code>app</code> folder inside your Android Studio project folder and drag the <code>google-services.json</code> file you've previously downloaded from Firebase website, overwrite the existing one.
+                            <br><br>
+
+                            9. Now enter <code>AndroidManifest.xml</code> in Android Studio, check all the <font color="green">comments</font> that start with <font color="green"><em><strong>IMPORTANT: Replace...</em></strong></font> and do what they say.<br><br><br>
+
+
+                            11. Enter <code>Home.java</code> and replace <strong>"877986214479"</strong> with your own <code>Sender ID</code> in this line of code, into <code>onStart()</code>:<br>
+
+<pre>
+    // IMPORTANT: REPLACE "877986214479" WITH YOUR OWN GCM SENDER ID  
+    installation.put("GCMSenderId", <font color="green"><strong>"877986214479"</strong></font>);
+</pre>
+<br><br>
+
+                            12. Upload the <code>main.js</code> file into the <strong>CloudCode</strong> container of your app from your back4app dashboard. Click <strong>SETTINGS</strong> to enter it, then  <strong>Choose file</strong> to upload <code>main.js</code> into CloudCode. Lastly, click <strong>SAVE</strong><br>
+
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/mainjs1.jpg"></div>
+                                <div class="thumbnail"><img src="assets/img/mainjs2.jpg"></div>
+                            </div>
+                            <br><br><br>
+
+
+                            13. Wait for about half an hour, the time to Google to process Cloud Messaging with back4app, then you will be able to send Push Notifications to all registered devices by using the app.<br>
+
+            </section>
+			
+			<!-- ONE SIGNAL SETUP -->
+            <section id="onesignal">
+                <hr>
+                <h2 class="title">One Signal setup</h2>
+
+                            1. Go to One Signal <a href="https://onesignal.com/" target="_blank"><strong>O</strong></a> and click <strong>New App/Website</strong>.
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-one.png"></div>
+                            </div>
+
+                            2. Add your project in your One Signal by giving it a name (usually the new name you gave to your app), and click Google Android (FCM) and click. <code>Configure your platform</code>.<br>
+							 <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-two.png"></div>
+                               
+                            </div>
+                            
+                            3. Copy server key and senderid from firebase console and paste it in server key feild and paste senderid in the senderid field and click<strong>NEXT</strong>
+                            
+							<div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-three.png"></div>
+                            </div><br><br>
+                            
+                            4. Select Native Android and click <strong>NEXT</strong>
+                             <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-four.png"></div>
+                               
+                            </div>
+							<br><br>
+
+                            5. Copy your APP id and click <strong>SAVE</strong>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-five.png"></div>
+                            </div>
+                            <br><br>
+
+                            6. Click New <strong>Push Button</strong>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-six.png"></div>
+                            </div>
+                            <br><br> 
+
+                            7. Add Push title in <strong>Title</strong> field and add message in <strong>Message</strong> field
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-seven.png"></div>
+                            </div>
+                            <br><br>
+
+                            8. Click  <strong>Review and Send</strong> 
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="thumbnail"><img src="assets/img/one-signal-eight.png"></div>
+                                
+                            </div>
+                            <br><br>
+							
+							9. <strong> Thats all, thanks</strong>
+                          
+                    </section>
+
+
+
+
+
+<footer class="text-center">
+  <img src="assets/img/logo_100.png">
+  <br>
+  <p>
+    Made with <font color="#e25353"><i class="fa fa-heart"></i></font> by
+    <a href="http://cubycode.com" target="_blank"><code>cubycode</code></a>
+  </p>
+</footer>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plan.ui.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script>
+$('a[href*=\\#]').on('click', function(event){     
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+});
+$('li > a').click(function() {
+    $('li').removeClass();
+    $(this).parent().addClass('active');
+});
+</script>
+</body>
+</html> 
